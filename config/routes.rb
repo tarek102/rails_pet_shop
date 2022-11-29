@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :groups do 
-    resources :subjects
+    resources :items
   end
 
   resources :splash, only: %i[index]
