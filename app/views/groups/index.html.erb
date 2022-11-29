@@ -1,19 +1,20 @@
-<div class="d-flex flex-column justify-content-between align-items-between" style="height: 80vh">
-  <h1 class="mb-3">Categories</h1>
+<div class="d-flex flex-column justify-content-between align-items-between p-5">
+  <h1 class="text-center mb-5">Categories</h1>
 
   <div>
     <% @groups.each do |group| %>
-      <div class="card mb-1">
+      <div class="card mb-3">
         <div class="card-body">
-          <div class="row d-flex justify-content-center">
-            <div class="col">
+          <div class="row d-flex justify-content-center align-items-center text-center">
+            <div class="col ">
               <%= image_tag(group.icon, alt: "Icon pic", height: "40px") %>
             </div>
             <div class="col">
               <%= link_to group.name, group_path(group) %>
             </div>
             <div class="col">
-              $<%= group.items.sum(:amount) %>
+              <span>Amount = $<%= group.items.sum(:amount) %></span>
+              <%= button_to "Destroy this group", @group, method: :destroy %>
             </div>
           </div>
         </div>

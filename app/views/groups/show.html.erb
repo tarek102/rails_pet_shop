@@ -1,10 +1,17 @@
-<div class="d-flex flex-column justify-content-between align-items-between" style="height: 80vh">
-  <div class="row">
+<div class="d-flex flex-column justify-content-between align-items-between px-5">
+  <div class="row my-5 px-5">
     <div class="col-8">
-      <h2><%= @group.name %></h2>
+      <div class="row">
+        <div class="col d-flex align-items-center">
+          <h2 class="mx-5"><%= @group.name %></h2>
+          <%= image_tag(@group.icon, alt: "Icon pic", height: "120 px") %>
+        </div>
+        
+      </div>
+      
     </div>
-    <div class="col-4">
-      <p>$<%= @total %></p>
+    <div class="col-4 d-flex align-items-center">
+      <h3>Total = $<%= @total %></h3>
     </div>
   </div>
 
