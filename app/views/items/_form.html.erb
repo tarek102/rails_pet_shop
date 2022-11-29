@@ -1,17 +1,22 @@
-<%= form_with(model: item) do |form| %>
-  <% if item.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+<div class="d-flex flex-column justify-content-between align-items-between">
+  
 
-      <ul>
-        <% item.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <%= form_with model: @item, url: group_items_path, class: "d-flex flex-column justify-content-between align-items-between" do |form| %>
+    <div class="mb-3">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
     </div>
+    <div class="mb-3">
+      <%= form.label :amount, class: "form-label" %>
+      <%= form.number_field :amount, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= form.collection_select(:groups, current_user.groups, :id, :name, {}, { multiple: true, size: 7, class: "form-select" }) %>
+    </div>
+
+    <%= form.submit class: "btn btn-primary" %>
+
   <% end %>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+  <%= link_to "Back", group_path(@group), class: "btn btn-secondary mt-2" %>
+</div>

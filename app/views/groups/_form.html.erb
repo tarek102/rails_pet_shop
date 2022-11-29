@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+  <div class='mb-3'>
+    <%= form.label :name, style: "display: block", class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class='mb-3'>
+    <%= form.label :icon, style: "display: block", class: "form-label" %>
+    <%= form.text_field :icon, class: "form-control" %>
+  </div>
+
+
   <div>
     <%= form.submit %>
   </div>
