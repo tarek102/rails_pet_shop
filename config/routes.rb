@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :groups do 
+  resources :groups, only: [:index, :show, :new, :create, :destroy] do 
     resources :items
   end
 
