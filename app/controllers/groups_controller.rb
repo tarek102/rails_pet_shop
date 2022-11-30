@@ -4,6 +4,7 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = current_user.groups
+    @group = @groups.find_by(id: params[:id])
   end
 
   # GET /groups/1 or /groups/1.json
@@ -53,7 +54,7 @@ class GroupsController < ApplicationController
 
   # DELETE /groups/1 or /groups/1.json
   def destroy
-
+    @group = Group.find(params[:id])
     @group.destroy
     
 
