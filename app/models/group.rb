@@ -3,6 +3,6 @@ class Group < ApplicationRecord
   has_many :group_items, dependent: :destroy
   has_many :items, through: :group_items
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { in: 1..250 }
   validates :icon, presence: true
 end
