@@ -6,7 +6,6 @@ RSpec.describe Group, type: :model do
   end
 
   context 'Validations' do
-
     it 'checks for name and icon presence' do
       group = Group.new(author: @user, name: 'Travel', icon: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png')
       expect(group.valid?).to eq true
@@ -22,5 +21,4 @@ RSpec.describe Group, type: :model do
       expect(group.valid?).to eq false
     end
   end
-
 end

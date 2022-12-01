@@ -89,6 +89,4 @@ test:
 #
 production:
   <<: *default
-  database: rails_pet_shop_production
-  username: rails_pet_shop
-  password: <%= ENV["RAILS_PET_SHOP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
