@@ -1,0 +1,15 @@
+.blue {
+  background-color: #3778c2 !important;
+  color: white !important;
+}
+
+.btn-success,
+.btn-primary {
+  border: none;
+  background-color: #5fb523;
+}
+
+.btn-secondary {
+  border: none;
+  background-color: #434b54;
+}

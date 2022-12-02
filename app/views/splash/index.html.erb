@@ -1,0 +1,15 @@
+<div class="container d-flex flex-column justify-content-center p-5">
+  <div class="intro-text mb-5">
+    <h2 class='text-center'>Pet Store</h2>
+  </div>
+
+
+  <% if user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-warning mb-2" %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary mb-2" %><br>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-info" %>
+  <% end %>
+
+</div>
+  
