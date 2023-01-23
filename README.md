@@ -2,7 +2,7 @@
 
 # Ruby on Rail Project - Pet Store
 
->Pet store is an application where you can create an account and add a category with some details like the name of the category and an icon for its image, for each category you can add an item to it with the name of the item and its price. The app will calculate automatically the sum of the items for each category.
+>Pet store is an application in which you can create an account and add a category with some details such as the name of the category and an icon for its image; for each category, you can add an item with the name of the item and its price. The app will automatically determine the total of the items in each category.
 
 ## Live Demo 
 [Pet Store](https://rails-pet-shop.onrender.com/)
